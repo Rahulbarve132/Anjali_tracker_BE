@@ -16,6 +16,10 @@ app.use(cors());
 app.use("/api/test-results", testResultsRoutes);
 app.use("/api/weekly-updates", weeklyUpdatesRoutes);
 
+app.get("/",(req,res)=>{
+  res.send(`<div>Hello World</div>`)
+})
+
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)
